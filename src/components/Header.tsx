@@ -5,8 +5,8 @@ import ThemeToggler from "./ThemeToggler";
 
 const navStyles = {
   wrapper: "hidden xl:flex items-center gap-x-8",
-  link: "",
-  underline: "",
+  link: "relative hover:text-primary transition-all",
+  underline: "bg-primary absolute left-0 bottom-0 h-[2px] w-full",
 }
 
 const Header = () => {
