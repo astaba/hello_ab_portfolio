@@ -1,9 +1,13 @@
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 const Logo = () => {
-	return (
-		<h4>Logo</h4>
-	)
-}
+  return (
+    <Link href="/">
+      <Image src="/logo.svg" width={54} height={54} alt="Page logo" priority />
+    </Link>
+  );
+};
 
-export default Logo
+export default Logo;
