@@ -69,3 +69,10 @@
     border-width: 2px;
   }
 }
+
+.h1 {
+  @apply text-6xl font-bold tracking-[-2px] mb-4;
+}
+.subtitle {
+  @apply text-lg font-light text-muted-foreground mb-8 max-w-[490px] mx-auto;
+}
