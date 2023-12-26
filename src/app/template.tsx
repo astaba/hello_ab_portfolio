@@ -14,14 +14,15 @@ const Template = ({ children }: { children: React.ReactNode }) => {
   const completion = useScrollRate();
   return (
     <>
-      <motion.main
+      <motion.div
         variants={variants}
         initial="hidden"
         animate="enter"
         transition={{ type: "linear", delay: 0.2, duration: 0.4 }}
+				className="mt-[6.5rem]"
       >
         {children}
-      </motion.main>
+      </motion.div>
       <span
         style={{ transform: `translateY(${completion - 100}%)` }}
         className="fixed bg-primary z-50 w-1 top-0 bottom-0 right-0 transition-all duration-300"
