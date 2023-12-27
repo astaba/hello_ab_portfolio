@@ -3,11 +3,16 @@ import { RiArrowDownSLine } from "react-icons/ri";
 import { Download, Send } from "lucide-react";
 
 import { Button } from "./ui/button";
+import DevImg from "./DevImg";
 import Socials from "./Socials";
 
 const socialStyles = {
   wrapper: "mx-auto flex gap-x-6 xl:m-0",
   icons: "text-[22px] text-foreground transition-all hover:text-primary",
+};
+const devImgStyles = {
+  wrapper: "relative bottom-0 h-[462px] w-[510px] bg-hero-shape-1 bg-no-repeat",
+  imgSrc: "/hero/developer.png",
 };
 
 const Hero = () => {
@@ -38,9 +43,12 @@ const Hero = () => {
             </div>
             <Socials socialsStyles={socialStyles} />
           </div>
-          <div className="hidden xl:flex relative">image</div>
+          <div className="bordo border-cyan-400 relative hidden xl:block">
+            <div className="absolute -right-2 -top-1 size-[500px] bg-hero-shape-2-light bg-no-repeat dark:bg-hero-shape-2-dark" />
+            <DevImg devImgStyles={devImgStyles} />
+          </div>
         </div>
-        <div className="absolute bottom-44 left-1/2 hidden animate-bounce md:flex xl:bottom-12">
+        <div className="absolute bottom-44 left-1/2 hidden animate-bounce md:block xl:bottom-12">
           <RiArrowDownSLine className="text-primary text-3xl" />
         </div>
       </div>
