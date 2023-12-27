@@ -1,8 +1,14 @@
 import Link from "next/link";
-import { RiArrowDownSLine } from "react-icons/ri";
+import {
+  RiBriefcase4Fill,
+  RiTodoFill,
+  RiTeamFill,
+  RiArrowDownSLine,
+} from "react-icons/ri";
 import { Download, Send } from "lucide-react";
 
 import { Button } from "./ui/button";
+import CountBadge from "./CountBadge";
 import DevImg from "./DevImg";
 import Socials from "./Socials";
 
@@ -14,6 +20,28 @@ const devImgStyles = {
   wrapper: "relative bottom-0 h-[462px] w-[510px] bg-hero-shape-1 bg-no-repeat",
   imgSrc: "/hero/developer.png",
 };
+const countBadges = [
+  {
+    positionStyles: "-left-[80px] top-[24%]",
+    title: "years of experience",
+    countUp: { end: 3, delay: 3 },
+    icon: <RiBriefcase4Fill />,
+  },
+  {
+    positionStyles: "-left-[16px] top-[80%]",
+    title: "finished projects",
+    countUp: { end: 6, delay: 3.6 },
+    suffix: "k",
+    icon: <RiTodoFill />,
+  },
+  {
+    positionStyles: "-right-[32px] top-[55%]",
+    title: "happy clients",
+    countUp: { end: 9, delay: 4.2 },
+    suffix: "k",
+    icon: <RiTeamFill />,
+  },
+];
 
 const Hero = () => {
   return (
@@ -44,6 +72,16 @@ const Hero = () => {
             <Socials socialsStyles={socialStyles} />
           </div>
           <div className="bordo border-cyan-400 relative hidden xl:block">
+            {countBadges.map((badge, i) => (
+              <CountBadge
+                key={i}
+                icon={badge.icon}
+                positionStyles={`absolute z-10 ${badge.positionStyles}`}
+                title={badge.title}
+                countUp={badge.countUp}
+                suffix={badge.suffix}
+              />
+            ))}
             <div className="absolute -right-2 -top-1 size-[500px] bg-hero-shape-2-light bg-no-repeat dark:bg-hero-shape-2-dark" />
             <DevImg devImgStyles={devImgStyles} />
           </div>
