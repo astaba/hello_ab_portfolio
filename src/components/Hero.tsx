@@ -3,6 +3,12 @@ import { RiArrowDownSLine } from "react-icons/ri";
 import { Download, Send } from "lucide-react";
 
 import { Button } from "./ui/button";
+import Socials from "./Socials";
+
+const socialStyles = {
+  wrapper: "mx-auto flex gap-x-6 xl:m-0",
+  icons: "text-[22px] text-foreground transition-all hover:text-primary",
+};
 
 const Hero = () => {
   return (
@@ -30,6 +36,7 @@ const Hero = () => {
                 Download CV <Download size={18} />
               </Button>
             </div>
+            <Socials socialsStyles={socialStyles} />
           </div>
           <div className="hidden xl:flex relative">image</div>
         </div>
