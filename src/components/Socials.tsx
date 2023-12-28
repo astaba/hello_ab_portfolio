@@ -8,11 +8,14 @@ import {
   RiFacebookFill,
 } from "react-icons/ri";
 
+import { SheetClose } from "./ui/sheet";
+
 type SocialsProps = {
   socialsStyles: {
     wrapper: string;
     icons: string;
   };
+  isMobile?: boolean;
 };
 
 const icons = [
@@ -23,14 +26,29 @@ const icons = [
   { path: "/", component: <RiFacebookFill /> },
 ];
 
-const Socials: React.FC<SocialsProps> = ({ socialsStyles }) => {
+const Socials: React.FC<SocialsProps> = ({
+  socialsStyles,
+  isMobile = false,
+}) => {
   return (
     <div className={socialsStyles.wrapper}>
-      {icons.map((icon, i) => (
-        <Link href={icon.path} key={i}>
+      {icons.map((icon, i) => {
+        const content = (
           <div className={socialsStyles.icons}>{icon.component}</div>
-        </Link>
-      ))}
+        );
+        return {
+          false: (
+            <Link href={icon.path} key={i}>
+              {content}
+            </Link>
+          ),
+          true: (
+            <Link href={icon.path} key={i}>
+              <SheetClose asChild>{content}</SheetClose>
+            </Link>
+          ),
+        }[isMobile.toString()];
+      })}
     </div>
   );
 };
