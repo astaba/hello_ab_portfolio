@@ -77,7 +77,11 @@ const config = {
         "hero-shape-1": "url(/hero/shape-1.svg)",
         "hero-shape-2-light": "url(/hero/shape-2-light.svg)",
         "hero-shape-2-dark": "url(/hero/shape-2-dark.svg)",
-      }
+        "dots-light": "url(/dots-light.svg)",
+        "dots-dark": "url(/dots-dark.svg)",
+        "about-shape-light": "url(/about/shape-light.svg)",
+        "about-shape-dark": "url(/about/shape-dark.svg)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
