@@ -45,8 +45,8 @@ const countBadges = [
 
 const Hero = () => {
   return (
-    <section className="outo h-[84vh] bg-hero bg-cover bg-bottom bg-no-repeat py-12 outline-[fuchsia] xl:py-24 xl:pt-28 dark:bg-none">
-      <div className="container mx-auto">
+    <section className="relative bordo min-h-[84vh] bg-hero bg-cover bg-bottom bg-no-repeat py-12 border-[fuchsia] xl:py-24 xl:pt-28 dark:bg-none"> {/** relative min-h instead of h */}
+      <div className="container outo outline-[#beb205] ">
         <div className="flex justify-between gat-x-8">
           <div className="outo outline-lime-500 max-w-[600px] mx-auto text-center flex flex-col justify-center xl:mx-0 xl:text-left">
             <div className="text-sm text-primary font-bold uppercase tracking-[4px]">

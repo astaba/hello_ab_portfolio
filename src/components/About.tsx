@@ -115,7 +115,7 @@ const About = () => {
   return (
     <section className="bordo border-[chartreuse] pb-12 xl:h-[860px] xl:py-24">
       <div className="outo outline-[fuchsia] container">
-        <h2 className="outo outline-yellow-500 about-title mb-8 mx-auto xl:mb-16">
+        <h2 className="outo outline-yellow-500 section-title mb-8 mx-auto xl:mb-16">
           About me
         </h2>
         <div className="flex flex-col xl:flex-row">
@@ -132,7 +132,7 @@ const About = () => {
             <Tabs defaultValue="personal" className="bordo border-lime-600">
               <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
                 <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
-                  Presonal Info
+                  Personal Info
                 </TabsTrigger>
                 <TabsTrigger
                   className="w-[162px] xl:w-auto"
