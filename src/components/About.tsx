@@ -191,7 +191,7 @@ const About = () => {
                             (item, i) => {
                               const { company, role, years } = item as QlfyExpeData;
                               return (
-                                <div className="flex gap-x-8 group">
+                                <div key={i} className="flex gap-x-8 group">
                                   <div className="h-[84px] w-[1px] ml-2 bg-border relative">
                                     <div className="size-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500" />
                                   </div>
@@ -218,7 +218,7 @@ const About = () => {
                             (item, i) => {
                               const { university, qualification, years } = item as QlfyEducData;
                               return (
-                                <div className="flex gap-x-8 group">
+                                <div key={i} className="flex gap-x-8 group">
                                   <div className="h-[84px] w-[1px] ml-2 bg-border relative">
                                     <div className="size-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500" />
                                   </div>
