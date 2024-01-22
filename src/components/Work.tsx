@@ -18,7 +18,7 @@ export type Project = {
   github: string;
 };
 
-const projectData = [
+export const projectData = [
   {
     image: "/work/3.png",
     category: "react js",
@@ -95,8 +95,8 @@ const projectData = [
 
 const Work = () => {
   return (
-    <section className="relative mb-12 xl:mb-48">
-      <div className="container">
+    <section className="mb-12 xl:mb-48">
+      <div className="container relative">
         <div className="max-w-[400px] mx-auto text-center mb-12 flex flex-col justify-center items-center xl:mx-0 xl:text-left xl:h-[400px] xl:items-start">
           <h2 className="section-title mb-4">Latest Projects</h2>
           <p className="subtitle mb-8">
