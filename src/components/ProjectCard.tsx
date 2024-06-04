@@ -12,7 +12,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  console.log(project);
+  // console.log(project);
   return (
     <Card className="group overflow-hidden relative">
       <CardHeader className="p-0">
