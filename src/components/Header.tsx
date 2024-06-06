@@ -24,10 +24,11 @@ const Header = () => {
         ? setIsWindowYoffset(true)
         : setIsWindowYoffset(false);
     };
+    // NOTE:  Throttling scroll event to debounce checkWindowYoffset
     let isYoffset = false;
     const truthyfier = () => (isYoffset = true);
     window.addEventListener("scroll", truthyfier);
-    setInterval(() => {
+    const timer = setInterval(() => {
       if (isYoffset) {
         isYoffset = false;
         checkWindowYoffset();
@@ -35,6 +36,7 @@ const Header = () => {
     }, 100);
     return () => {
       window.removeEventListener("scroll", truthyfier);
+      clearInterval(timer);
     };
   }, []);
 
